@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ViraShop — Beauté, soin & confiance</title>
+<meta name="description" content="ViraShop — boutique de soins cosmétiques en Côte d'Ivoire">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="top">🚚 Livraison en Côte d’Ivoire <span>•</span> ✦ Soins & beauté <span>•</span> <a href="https://wa.me/2250720136126">WhatsApp : 07 20 13 61 26</a></div>
+
+<header>
+  <a class="logo" href="#"><b>✿</b> VIRA<span>SHOP</span><small>Votre beauté, notre priorité</small></a>
+  <div class="search"><input id="search" placeholder="Rechercher un produit ou une marque…"><button>⌕</button></div>
+  <button class="cart" id="openCart">🛒 <i id="count">0</i> Panier <small id="total">0 FCFA</small></button>
+</header>
+
+<nav><a class="active" href="#accueil">Accueil</a><a href="#produits">Soins du visage</a><a href="#produits">Soins du corps</a><a href="#marques">Marques</a><a href="#produits">Promotions</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
+
+<main>
+<section class="hero" id="accueil">
+  <div>
+    <p class="eyebrow">SKINCARE & SOINS DU CORPS</p>
+    <h1>Prenez soin de votre peau avec les meilleures marques.</h1>
+    <p>Découvrez une sélection de soins pour le visage et le corps, avec commande simple et livraison en Côte d’Ivoire.</p>
+    <div class="actions"><a class="btn" href="#produits">Découvrir la boutique →</a><a class="btn light" href="https://wa.me/2250720136126?text=Bonjour%20ViraShop%2C%20je%20souhaite%20passer%20une%20commande.">💬 Commander sur WhatsApp</a></div>
+    <div class="trust"><span>✓ <b>Produits sélectionnés</b><small>Pour votre routine</small></span><span>🚚 <b>Livraison</b><small>Partout en Côte d’Ivoire</small></span><span>🔒 <b>Paiement flexible</b><small>Mobile Money ou livraison</small></span></div>
+  </div>
+  <div class="visual"><div class="woman">VIRA<br><strong>SKIN</strong></div><div class="bottle one">NIVEA<small>BODY MILK</small></div><div class="bottle two">MIXA<small>CRÈME</small></div><div class="bottle three">CeraVe<small>HYDRATANTE</small></div></div>
+</section>
+
+<section class="cats">
+<article><div class="pic">◯</div><h3>Soins du visage</h3><p>Nettoyage, hydratation, éclat</p><button onclick="filter('Visage')">Voir la catégorie →</button></article>
+<article><div class="pic cream">✦</div><h3>Crèmes pour le corps</h3><p>Hydratation longue durée</p><button onclick="filter('Corps')">Voir la catégorie →</button></article>
+<article><div class="pic brand">MIXA · NIVEA</div><h3>Nos marques</h3><p>Mixa, Nivea, CeraVe, Vaseline…</p><a href="#marques">Voir les marques →</a></article>
+<article><div class="pic promo">%</div><h3>Promotions</h3><p>Des prix plus doux</p><button onclick="filter('Promo')">Voir les offres →</button></article>
+</section>
+
+<section id="produits" class="products-sec">
+<div class="head"><div><p class="eyebrow">NOTRE SÉLECTION</p><h2>Nos produits</h2></div><button onclick="filter('Tous')">Voir tous les produits →</button></div>
+<div class="filters"><button class="selected" onclick="filter('Tous')">Tous</button><button onclick="filter('Corps')">Corps</button><button onclick="filter('Visage')">Visage</button><button onclick="filter('Promo')">Promotions</button></div>
+<div id="grid" class="grid"></div>
+<p id="empty" class="empty">Aucun produit trouvé.</p>
+</section>
+
+<section id="marques" class="brands"><p class="eyebrow">DES MARQUES CONNUES</p><h2>Nos marques</h2><div><b>Mixa</b><b>NIVEA</b><b>CeraVe</b><b>Vaseline</b><b>Garnier</b><b>Dove</b><b>Eucerin</b></div></section>
+
+<section class="pay"><div>🚚 <b>Livraison</b><small>Abidjan et partout en Côte d’Ivoire</small></div><div>📱 <b>Mobile Money</b><small>Orange Money · MTN MoMo · Moov Money · Wave</small></div><div>💵 <b>À la livraison</b><small>Selon zone et disponibilité</small></div></section>
+
+<section id="apropos" class="about"><div><p class="eyebrow">À PROPOS</p><h2>La beauté, simplement.</h2></div><p>ViraShop est une boutique en ligne pensée pour rendre les soins cosmétiques plus accessibles en Côte d’Ivoire. Commandez facilement et échangez directement avec nous sur WhatsApp.</p></section>
+</main>
+
+<footer id="contact"><div class="foot"><div><div class="flogo">VIRA<span>SHOP</span></div><p>Votre beauté, notre priorité.</p></div><div><h4>Boutique</h4><a href="#produits">Nos produits</a><a href="#marques">Nos marques</a><a href="#apropos">À propos</a></div><div><h4>Commande</h4><p>WhatsApp</p><a href="https://wa.me/2250720136126">07 20 13 61 26</a><p>Mobile Money / livraison</p></div><div><h4>Contact</h4><p>🇨🇮 Côte d’Ivoire</p><a href="https://wa.me/2250720136126">Écrire sur WhatsApp →</a></div></div><div class="copy">© 2026 ViraShop — Tous droits réservés.</div></footer>
+
+<aside id="drawer"><div class="drawerhead"><h2>Votre panier</h2><button onclick="closeCart()">×</button></div><div id="items"></div><div class="drawerfoot"><strong id="grand">0 FCFA</strong><button class="btn" onclick="checkout()">Passer la commande</button><small>Confirmation de la commande sur WhatsApp.</small></div></aside>
+<div id="shade" onclick="closeCart()"></div>
+
+<script src="script.js"></script>
+</body></html>
